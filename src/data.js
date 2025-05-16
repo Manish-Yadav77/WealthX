@@ -62,7 +62,17 @@ import niftyBank from "./assets/GreenTab/niftybank.jpg";
 import nifty50 from "./assets/GreenTab/nifty50.jpg";
 import bankAccount from "./assets/Accounts/BankAccount.jpeg";
 import WealthxHome from "./assets/landingPageImg/WealthX1.jpg";
+import StopScrolling from "./assets/other/StopScrolling.jpeg";
+import SkillNeed from "./assets/other/SkillNeed.jpeg";
+import NoCapital from "./assets/other/NoCapital.jpeg";
+import GrowWithUs from "./assets/other/GrowWithUs.jpeg";
+import BiggestMistake from "./assets/other/BiggestMistake.jpeg";
+import Get50Lakh from "./assets/other/get50Lakh.jpeg";
+import MostTrusted from "./assets/other/MostTrusted.jpeg";
+import AffordableTrading from "./assets/other/AffordableTrading.jpeg";
+import FundsProblem from "./assets/other/fundsProblem.jpeg";
 
 
 
-export {qrcode1, poster3lakh, poster50lakh, fund3lakh, banner, Become, WealthX, WealthX2, WealthX3, companyLogo, companyLogo2, companyLogo3, companyLogo4, cryptobgless, teampng, tradeon2, sunIcon, starIcon, whytradebg, girlwithphone, vectorIcon, phoneGirl, vectorRocket, Lead1, Lead2, Lead3, Lead4, faqimg, author1, author2, author3, mobileStar, bgImg, AccountImg, companyStory, apple, etherium, etheriumQrCode, bajajFinance, bhartaElectronics, bitcoin, bse, itcLimited, hero, ultratechCement, jswSteel, hcl, financialServices, ongc, reliance, shriramFinance, larsenAndToubro, mrf, tataMotors, sbi, iciciBank, hdfcBank, spBseSensex, nifty50, niftyBank, niftyMidcap, niftySmallcap, bankAccount, WealthxHome};
+
+export {qrcode1, poster3lakh, poster50lakh, fund3lakh, banner, Become, WealthX, WealthX2, WealthX3, companyLogo, companyLogo2, companyLogo3, companyLogo4, cryptobgless, teampng, tradeon2, sunIcon, starIcon, whytradebg, girlwithphone, vectorIcon, phoneGirl, vectorRocket, Lead1, Lead2, Lead3, Lead4, faqimg, author1, author2, author3, mobileStar, bgImg, AccountImg, companyStory, apple, etherium, etheriumQrCode, bajajFinance, bhartaElectronics, bitcoin, bse, itcLimited, hero, ultratechCement, jswSteel, hcl, financialServices, ongc, reliance, shriramFinance, larsenAndToubro, mrf, tataMotors, sbi, iciciBank, hdfcBank, spBseSensex, nifty50, niftyBank, niftyMidcap, niftySmallcap, bankAccount, WealthxHome, StopScrolling, SkillNeed, NoCapital, GrowWithUs, BiggestMistake, Get50Lakh, MostTrusted, AffordableTrading, FundsProblem,};

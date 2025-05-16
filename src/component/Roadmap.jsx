@@ -73,8 +73,8 @@ const Roadmap = () => {
           <h2 className="text-3xl font-bold text-center mb-10">Roadmap</h2>
           <p className="text-center text-gray-400 max-w-xl mx-auto mb-16">
             We are constantly updating our roadmap to bring transparency for our
-            users and to get your feedback – please tell us what is important for
-            you!
+            users and to get your feedback – please tell us what is important
+            for you!
           </p>
 
           <div
@@ -89,15 +89,20 @@ const Roadmap = () => {
             ></div>
 
             {/* Items */}
+            
             {/* Item 1 */}
             <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 lg:ml-[33%]">
               <div className="relative md:mr-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2010</h3>
-                <h3 className="text-xl font-bold text-left">Introduction to Forex</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2010 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  The Idea Was Born
+                </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  The Forex market is incredibly liquid ensuring that you can
-                  enter and exit positions easily even with large amounts of
-                  capital.
+                  Started as a small group of traders focusing on NIFTY 50 and
+                  SENSEX. Traded manually with personal capital and high
+                  conviction swing strategies.
                 </p>
               </div>
             </div>
@@ -105,12 +110,17 @@ const Roadmap = () => {
             {/* Item 2 */}
             <div className="mb-10 md:mt-48 md:col-start-2 w-2/3 ml-10 md:ml-0">
               <div className="relative md:ml-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2012</h3>
-                <h3 className="text-xl font-bold text-left">Trading Strategies</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2012 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  {" "}
+                  Building the Base
+                </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  Trading Strategies – The world of finance offers a multitude of
-                  opportunities for individuals seeking to build their wealth and
-                  explore new horizons.
+                  Developed edge in BANK NIFTY options through price action and
+                  volume analysis. Created a small capital pool to back top
+                  performers within the team.
                 </p>
               </div>
             </div>
@@ -118,12 +128,16 @@ const Roadmap = () => {
             {/* Item 3 */}
             <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 md:ml-[33%]">
               <div className="relative md:mr-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2014</h3>
-                <h3 className="text-xl font-bold text-left">Trading Psychology</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2014 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  Data-Driven Shift
+                </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  Trading Psychology – We’ll take you on a journey through the
-                  fundamentals of Forex trading, how it works, and why it’s worth
-                  exploring.
+                  Started using Excel + TradingView for backtesting. Introduced
+                  risk-reward based strategies with stop loss discipline. Market
+                  exposure expanded to commodities (Gold, Crude).
                 </p>
               </div>
             </div>
@@ -131,12 +145,16 @@ const Roadmap = () => {
             {/* Item 4 */}
             <div className="mb-10 md:col-start-2 md:mt-48 w-2/3 ml-10 md:ml-0">
               <div className="relative md:ml-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2016</h3>
-                <h3 className="text-xl font-bold text-left">Economic Indicators</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2016 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  Crypto Curiosity
+                </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  Economic Indicators – Currencies on the foreign exchange market
-                  with the aim of making a profit. It’s the largest and most
-                  liquid financial market.
+                  Started experimenting with Bitcoin and Ethereum. Executed
+                  first trades on Indian crypto exchanges. Built arbitrage bots
+                  for BTC-INR pairs.
                 </p>
               </div>
             </div>
@@ -144,12 +162,16 @@ const Roadmap = () => {
             {/* Item 5 */}
             <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 md:ml-[33%]">
               <div className="relative md:mr-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2016</h3>
-                <h3 className="text-xl font-bold text-left">Risk Management</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2018 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  The Turning Point
+                </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  Risk Management – With a daily trading volume that exceeds $6
-                  trillion. Unlike traditional stock markets where you buy and
-                  sell shares.
+                  Consistently profitable strategies in both Bank Nifty options
+                  and crypto futures. Developed in-house risk management rules
+                  and capital allocation frameworks.
                 </p>
               </div>
             </div>
@@ -157,13 +179,102 @@ const Roadmap = () => {
             {/* Item 6 */}
             <div className="mb-10 md:col-start-2 md:mt-48 w-2/3 ml-10 md:ml-0">
               <div className="relative md:ml-10">
-                <h3 className="text-3xl font-bold text-[#9AD953] text-left">2018</h3>
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2020 –
+                </h3>
                 <h3 className="text-xl font-bold text-left">
-                  Building Your Trading Plan
+                  The Vision Expanded
                 </h3>
                 <p className="text-gray-500 mt-2 text-left">
-                  Building Your Trading Plan – Unlike stock markets, Forex
-                  involves the exchange of one currency for another to profit.
+                  Launched internal funded trader challenge. Evaluated over 100
+                  traders on demo before funding them with live capital. Added
+                  weekend crypto trading as a unique opportunity for traders.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 7 */}
+            <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 md:ml-[33%]">
+              <div className="relative md:mr-10">
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2022 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  Official Funded Account Launch
+                </h3>
+                <p className="text-gray-500 mt-2 text-left">
+                  Launched public platform for Indian traders to access real
+                  capital. Segmented funding in equities, indices, and crypto.
+                  Onboarded 500+ traders with scalable accounts.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 8 */}
+            <div className="mb-10 md:col-start-2 md:mt-48 w-2/3 ml-10 md:ml-0">
+              <div className="relative md:ml-10">
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2023 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">Tech + Talent</h3>
+                <p className="text-gray-500 mt-2 text-left">
+                  Launched AI-based evaluation metrics. Integrated advanced
+                  trader dashboards with PNL tracking, drawdown alerts, and
+                  leaderboards. Expanded crypto coverage to include DeFi tokens.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 9 */}
+            <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 md:ml-[33%]">
+              <div className="relative md:mr-10">
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2024 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  Pan India + Global Traders
+                </h3>
+                <p className="text-gray-500 mt-2 text-left">
+                  Scaled platform to 15+ cities in India. Partnered with crypto
+                  exchanges for smooth payouts. Introduced “Weekend Hustle”
+                  program for crypto-only traders. Over ₹2 crore funded to
+                  Indian traders in a single year.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 10 */}
+            <div className="mb-10 md:col-start-2 md:mt-48 w-2/3 ml-10 md:ml-0">
+              <div className="relative md:ml-10">
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  📍 2025 –
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  The Revolution Continues
+                </h3>
+                <p className="text-gray-500 mt-2 text-left">
+                  Launching mobile app for trading performance + instant
+                  payouts. Expanding funded programs to commodities & forex.
+                  Building India’s first crypto + equity hybrid evaluation
+                  model. Goal: Fund 5,000 traders by end of year.
+                </p>
+              </div>
+            </div>
+
+            {/* Item 11 */}
+            <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 md:ml-[33%]">
+              <div className="relative md:mr-10">
+                <h3 className="text-3xl font-bold text-[#9AD953] text-left">
+                  💡 What’s Next?
+                </h3>
+                <h3 className="text-xl font-bold text-left">
+                  Instant evaluation funding model.
+                </h3>
+                <p className="text-gray-500 mt-2 text-left">
+                  Real-time trade coaching by elite funded traders. First
+                  “Trader’s Summit India” – crypto & equity combined. Goal:
+                  Empower every Indian with a smartphone to trade smart, trade
+                  funded.
                 </p>
               </div>
             </div>
@@ -171,7 +282,7 @@ const Roadmap = () => {
         </section>
 
         {/* Earning Section */}
-        <EarningSection/>
+        <EarningSection />
       </main>
     </>
   );

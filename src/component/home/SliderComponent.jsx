@@ -38,7 +38,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
     <div className="bg-gray-950 text-white py-8 pt-0 pb-0 relative overflow-hidden">
        <Slider {...settings}>
       {/* Slide 1 - About WealthEx */}
-      <div className="slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore1 ? 'h-[800px] duration-500 transition-all' : 'h-[631px] duration-500 transition-all'}`}>
         <div className="flex flex-col lg:flex-row justify-between">
 
           {/* Left Side Content */}
@@ -107,19 +107,21 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
           </div>
 
           {/* Right side - Image */}
-          <div className={`mt-8 md:mt-10 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
+          <div className={`mt-8 md:mt-10 md:mb-14 md:mr-15 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
             <img
               src={WealthxHome}
               alt="About WealthEx"
-              className="w-90 lg:w-130 rounded-lg shadow-lg"
+              className="w-90 lg:w-110 rounded-lg shadow-lg"
             />
           </div>
         </div>
       </div>
 
       {/* Slide 2 - Meet the Minds Behind WealthEx */}
-      <div className="slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore2 ? 'h-[800px] duration-500 transition-all' : 'h-[631px] duration-500 transition-all'} `}>
         <div className="flex flex-col lg:flex-row justify-between">
+
+          {/* Left Part Content */}
           <div className="md:w-1/2 flex flex-col text-left">
             <h2 className="text-4xl font-bold pb-4">
               Meet the Minds Behind WealthEx
@@ -132,15 +134,15 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
               democratizing trading capital for Indian talent.
             </p>
 
-            {/* Show Our Leadership Team content conditionally */}
-            {readMore2 && (
-              <>
-                <p className="text-gray-400 max-w-xl mt-4">
+            <p className="text-gray-400 max-w-xl mt-4">
                   Our leadership team brings deep experience in trading, technology,
                   and risk management to empower you with cutting-edge strategies and
                   tools.
                 </p>
 
+            {/* Show Our Leadership Team content conditionally */}
+            {readMore2 && (
+              <>
                 <h3 className="font-semibold text-xl text-white mt-10 mb-3">
                   🔹 Our Leadership Team
                 </h3>
@@ -188,7 +190,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
           </div>
 
           {/* Right side - Image */}
-          <div className={`mt-8 md:mt-40 ${readMore2 ? 'lg:mt-30 duration-500 transition-all' : ' lg:mt-0 duration-500 transition-all '}`}>
+          <div className={`mt-8 md:mt-40 ${readMore2 ? 'lg:mt-30 duration-500 transition-all' : ' lg:mt-20 duration-500 transition-all '}`}>
             <img
               src={teampng}
               alt="Leadership Team"
