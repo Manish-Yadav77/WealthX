@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { WealthX, WealthX3 } from "../data";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { QrContext } from "../context/QrContext";
 
 function Navbar() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -13,6 +14,23 @@ function Navbar() {
     setShowCompanyDropdown(!showCompanyDropdown);
   const toggleResourcesDropdown = () =>
     setShowResourcesDropdown(!showResourcesDropdown);
+  
+  const navigate = useNavigate();
+
+  const { setUser, setToken } = useContext(QrContext) 
+
+  const handleLogOut = () => {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  sessionStorage.clear();
+
+  // Reset user-related context or state
+  setUser(null);
+  setToken(null);
+
+  // Redirect to the login page
+  navigate('/login');
+};
 
   return (
     <div>
@@ -170,10 +188,8 @@ function Navbar() {
               </ul>
 
               {/* Sign In */}
-            {location.pathname==='/Admin' || location.pathname==='/accounts'? '' :
-
             
-              <li className="group hover:scale-105 hover:text-[#9ad953] font-medium transition-transform duration-300 lg:absolute xl:mr-35 md:text-gray-400 lg:right-40 xl:right-5 flex items-center gap-4">
+              <li className={`group hover:scale-105 hover:text-[#9ad953] font-medium transition-transform duration-300 lg:absolute xl:mr-35 md:text-gray-400 lg:right-40 xl:right-5 flex items-center gap-4 ${location.pathname==='/admin' || location.pathname==='/Admin' || location.pathname==='/accounts'? 'hidden' : ''}`}>
                 <Link
                   to="/login"
                   className="text-white group-hover:text-[#9ad953]"
@@ -183,11 +199,24 @@ function Navbar() {
                 </Link>
                 <i className="fas fa-arrow-right mr-2 transition-transform duration-700 group-hover:rotate-[-70deg]"></i>
               </li>
-}
+
+              {/* Log Out */}
+
+              <button onClick={handleLogOut} className={`group hover:scale-105 hover:text-green-700 font-medium transition-transform duration-300 lg:absolute lg:-right-8 xl:-right-14 md:border md:px-6 lg:px-3 rounded-2xl border-green-300 md:text-black md:hover:bg-[#F5C96D] md:hover:text-black md:bg-[#9ad953] lg:p-3 lg:mr-4 xl:mr-12 flex gap-4 hover:cursor-pointer items-center ${location.pathname=='/admin' || location.pathname==='/Admin' || location.pathname=='/accounts'? '' : 'hidden'}`}>
+              <i className="fas fa-sign-out-alt sm:hidden"></i>
+
+
+                <Link to="/signup" className="inline-flex items-center">
+                  <span className="flex gap-3 font-bold">
+                    Log Out
+                    <i className="fas fa-arrow-right mr-2 transition-transform duration-700 group-hover:rotate-[-70deg] mt-1"></i>
+                  </span>
+                </Link>
+              </button>
 
               {/* // Sign Up */}
-              {location.pathname==='/Admin' || location.pathname==='/accounts'? '' :
-              <li className="group hover:scale-105 hover:text-green-700 font-medium transition-transform duration-300 lg:absolute lg:-right-8 xl:-right-14 md:border md:px-6 lg:px-3 rounded-2xl border-green-300 md:text-black md:hover:bg-[#F5C96D] md:hover:text-black md:bg-[#9ad953] lg:p-3 lg:mr-4 xl:mr-12 flex gap-4 hover:cursor-pointer items-center">
+              
+              <li className={`group hover:scale-105 hover:text-green-700 font-medium transition-transform duration-300 lg:absolute lg:-right-8 xl:-right-14 md:border md:px-6 lg:px-3 rounded-2xl border-green-300 md:text-black md:hover:bg-[#F5C96D] md:hover:text-black md:bg-[#9ad953] lg:p-3 lg:mr-4 xl:mr-12 flex gap-4 hover:cursor-pointer items-center ${location.pathname==='/admin' || location.pathname==='/Admin' || location.pathname==='/accounts'? 'hidden' : ''}`}>
                 <i className="fa-solid fa-user-plus sm:hidden"></i>
                 <Link to="/signup" className="inline-flex items-center">
                   <span className="flex gap-3 font-bold">
@@ -195,7 +224,7 @@ function Navbar() {
                     <i className="fas fa-arrow-right mr-2 transition-transform duration-700 group-hover:rotate-[-70deg] mt-1"></i>
                   </span>
                 </Link>
-              </li>}
+              </li>
             </ul>
           </div>
 

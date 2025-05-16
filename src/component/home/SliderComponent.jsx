@@ -190,7 +190,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
           </div>
 
           {/* Right side - Image */}
-          <div className={`mt-8 md:mt-40 ${readMore2 ? 'lg:mt-30 duration-500 transition-all' : ' lg:mt-20 duration-500 transition-all '}`}>
+          <div className={`mt-8 md:mt-40 ${readMore2 ? 'lg:mt-30 duration-500 transition-all' : ' lg:mt-0 duration-500 transition-all '}`}>
             <img
               src={teampng}
               alt="Leadership Team"

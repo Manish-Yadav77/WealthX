@@ -6,6 +6,12 @@ export const QrContext = createContext(
 
   qr2: null,
 
+  user:null,
+  
+  token:null,
+
   setQr1: () => {},
   setQr2: () => {},
+  setUser: () => {},
+  setToken: () => {},
 });
