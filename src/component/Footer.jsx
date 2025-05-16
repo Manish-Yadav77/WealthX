@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
   useEffect(() => {
@@ -26,9 +27,11 @@ function Footer() {
     setInterval(updateCountdown, 1000);
   }, []);
 
+  const location = useLocation();
+
   return (
     <div>
-      <footer className="bg-gray-900 text-white py-12 px-6 md:px-24">
+      <footer className={`bg-gray-900 text-white py-12 px-6 md:px-24 ${location.pathname==='/login' || location.pathname === '/signup' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Quick Links */}
           <div>

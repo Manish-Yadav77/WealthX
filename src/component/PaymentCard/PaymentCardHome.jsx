@@ -177,7 +177,7 @@ function PaymentCard() {
       {/* separte them into 70 / 30 */}
 
       <div
-        className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 px-4 py-8"
+        className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-8 px-4 py-6"
         style={{ minHeight: "500px" }}
       >
         {/* Left part: 70% width */}

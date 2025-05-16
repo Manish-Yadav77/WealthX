@@ -28,6 +28,13 @@ const Contact = () => {
       </p>
     </div>
 
+    <div className="mb-8">
+      <h2 className="text-lg font-medium">Email Us:</h2>
+      <p className="text-gray-300">
+        fundedbywealthx@gmail.com 
+      </p>
+    </div>
+
     <h1 className="text-2xl font-semibold mb-4">Our Social Media</h1>
     <div className="flex gap-4">
       <i className="fab fa-facebook-f text-2xl"></i>

@@ -30,6 +30,19 @@ const Roadmap = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const imgData = [
+    FundsProblem,
+    AffordableTrading,
+    FundsProblem,
+    MostTrusted,
+    Get50Lakh,
+    BiggestMistake,
+    GrowWithUs,
+    NoCapital,
+    SkillNeed,
+    StopScrolling,
+  ]
+
   return (
     <>
       {/* TailwindCSS CDN is assumed loaded globally or via postcss */}
@@ -288,67 +301,21 @@ const Roadmap = () => {
           <div className="relative w-full">
             <Marquee speed={45} gradient={false}>
               <div className="flex gap-12 sm:gap-16 items-center whitespace-nowrap min-w-max px-4">
-                <img
-                  src={FundsProblem}
-                  alt="Company Logo"
+                {
+                  imgData.map((itm,idx)=>(
+                    <img src={itm} alt={itm} key={idx} 
                   className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={AffordableTrading}
-                  alt="Company Logo 2"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={FundsProblem}
-                  alt="Company Logo 3"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={AffordableTrading}
-                  alt="Company Logo 4"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={MostTrusted}
-                  alt="Company Logo 5"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
+                  />
+                  ))
+                }
                 {/* Duplicate logos for smooth infinite scroll */}
-                <img
-                  src={Get50Lakh}
-                  alt="Company Logo 6"
+                {
+                  imgData.map((itm,idx)=>(
+                    <img src={itm} alt={itm} key={idx} 
                   className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={BiggestMistake}
-                  alt="Company Logo 7"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={GrowWithUs}
-                  alt="Company Logo 8"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={AffordableTrading}
-                  alt="Company Logo 9"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={NoCapital}
-                  alt="Company Logo 1"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={SkillNeed}
-                  alt="Company Logo"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
-                <img
-                  src={StopScrolling}
-                  alt="Company Logo"
-                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
-                />
+                  />
+                  ))
+                }
               </div>
             </Marquee>
           </div>
