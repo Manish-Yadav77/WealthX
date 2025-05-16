@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
   useEffect(() => {
@@ -37,9 +37,9 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><a href="./Services.html" className="hover:text-white">Service</a></li>
-              <li><a href="./Contact.html" className="hover:text-white">Contact</a></li>
-              <li><a href="Support.html" className="hover:text-white">Support</a></li>
+              <li><Link to="/accounts" className="hover:text-white">Service</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/support" className="hover:text-white">Support</Link></li>
             </ul>
           </div>
 
@@ -47,9 +47,9 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><a href="About.html" className="hover:text-white">About</a></li>
-              <li><a href="./Contact.html" className="hover:text-white">Contact</a></li>
-              <li><a href="./Terms&Condition.html" className="hover:text-white">Terms & Conditions</a></li>
+              <li><Link to="/about" className="hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/rules&terms" className="hover:text-white">Rules & Terms</Link></li>
             </ul>
           </div>
 
@@ -98,18 +98,18 @@ function Footer() {
             &copy; 2020 <strong className="text-[#9ad953]">Tradez</strong> – All Rights Reserved
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-[#9ad953] transition">
+            <Link to="#" className="hover:text-[#9ad953] transition">
               <i className="fab fa-facebook-f text-xl"></i>
-            </a>
-            <a href="#" className="hover:text-[#9ad953] transition">
+            </Link>
+            <Link to="#" className="hover:text-[#9ad953] transition">
               <i className="fab fa-twitter text-xl"></i>
-            </a>
-            <a href="#" className="hover:text-[#9ad953] transition">
+            </Link>
+            <Link to="#" className="hover:text-[#9ad953] transition">
               <i className="fab fa-instagram text-xl"></i>
-            </a>
-            <a href="#" className="hover:text-[#9ad953] transition">
+            </Link>
+            <Link to="#" className="hover:text-[#9ad953] transition">
               <i className="fab fa-discord text-xl"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

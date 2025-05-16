@@ -14,6 +14,7 @@ import About from './component/About';
 import Contact from './component/Contact';
 import TermsAndConditions from './component/TermsConditions';
 import Roadmap from './component/Roadmap';
+import Support from './component/Support';
 
 function App() {
   const [qr1, setQr1] = useState(null);
@@ -47,6 +48,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/rules&terms" element={<TermsAndConditions />} />
             <Route path="/roadmap" element={<Roadmap />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
           <Footer/>
         </div>
