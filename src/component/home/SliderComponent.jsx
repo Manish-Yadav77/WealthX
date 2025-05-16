@@ -107,7 +107,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
           </div>
 
           {/* Right side - Image */}
-          <div className={`mt-8 md:mt-10 md:mb-14 md:mr-15 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
+          <div className={`mt-8 md:mt-0 md:mb-4 md:mr-15 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
             <img
               src={WealthxHome}
               alt="About WealthEx"

@@ -185,7 +185,7 @@ function PaymentCard() {
           className={`flex-[0.7] bg-gray-900 rounded-2xl shadow-lg overflow-hidden p-6 text-white ${
             readMore
               ? "h-fit md:h-[1030px] duration-500 transition-all mt-0"
-              : " h-[500px] duration-500 transition-all mt-20"
+              : " h-[500px] duration-500 transition-all mt-9"
           } text-balance`}
         >
           <h2 className="text-3xl font-bold mb-4">

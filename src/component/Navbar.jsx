@@ -16,7 +16,8 @@ function Navbar() {
 
   return (
     <div>
-      <nav className="top-0 z-50 w-full px-4 sm:px-6 md:px-8 py-4 bg-black border-b border-white/10 text-white">
+
+      <nav className={`top-0 z-50 w-full px-4 sm:px-6 md:px-8 py-4 bg-black border-b border-white/10 text-white ${location.pathname==='/login' || location.pathname === '/signup' ? 'hidden' : ''}`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Left - Logo & Brand */}
           <Link to="/">
