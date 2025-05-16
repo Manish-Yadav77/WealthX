@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import { bgImg } from "../data";
+import { AffordableTrading, bgImg, BiggestMistake, FundsProblem, Get50Lakh, GrowWithUs, MostTrusted, NoCapital, SkillNeed, StopScrolling } from "../data";
 import EarningSection from "./home/EarningSection";
+import Marquee from "react-fast-marquee";
 
 const Roadmap = () => {
   const scrollLineRef = useRef(null);
@@ -89,7 +90,7 @@ const Roadmap = () => {
             ></div>
 
             {/* Items */}
-            
+
             {/* Item 1 */}
             <div className="mb-10 md:col-start-1 md:text-right w-2/3 ml-10 lg:ml-[33%]">
               <div className="relative md:mr-10">
@@ -278,6 +279,78 @@ const Roadmap = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Scrolling of Greent tab Section */}
+
+        <section className="bg-[#1F1F1F] overflow-hidden w-full">
+          <div className="relative w-full">
+            <Marquee speed={45} gradient={false}>
+              <div className="flex gap-12 sm:gap-16 items-center whitespace-nowrap min-w-max px-4">
+                <img
+                  src={FundsProblem}
+                  alt="Company Logo"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={AffordableTrading}
+                  alt="Company Logo 2"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={FundsProblem}
+                  alt="Company Logo 3"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={AffordableTrading}
+                  alt="Company Logo 4"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={MostTrusted}
+                  alt="Company Logo 5"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                {/* Duplicate logos for smooth infinite scroll */}
+                <img
+                  src={Get50Lakh}
+                  alt="Company Logo 6"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={BiggestMistake}
+                  alt="Company Logo 7"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={GrowWithUs}
+                  alt="Company Logo 8"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={AffordableTrading}
+                  alt="Company Logo 9"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={NoCapital}
+                  alt="Company Logo 1"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={SkillNeed}
+                  alt="Company Logo"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+                <img
+                  src={StopScrolling}
+                  alt="Company Logo"
+                  className="h-70 sm:h-120 rounded-4xl opacity-70 w-auto"
+                />
+              </div>
+            </Marquee>
           </div>
         </section>
 
