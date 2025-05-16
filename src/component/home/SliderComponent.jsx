@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { bitcoin, cryptobgless, teampng } from "../../data";
+import { bitcoin, cryptobgless, teampng, WealthX, WealthxHome } from "../../data";
 
 const SliderComponent = () => {
   const settings = {
@@ -40,6 +40,8 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
       {/* Slide 1 - About WealthEx */}
       <div className="slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
         <div className="flex flex-col lg:flex-row justify-between">
+
+          {/* Left Side Content */}
           <div className="md:w-1/2 flex flex-col text-left">
             <h2 className="text-4xl font-bold pb-6">About WealthEx</h2>
             <p className="text-gray-400 max-w-xl">
@@ -105,11 +107,11 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
           </div>
 
           {/* Right side - Image */}
-          <div className={`mt-8 md:mt-20 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
+          <div className={`mt-8 md:mt-10 ${readMore1 ? 'lg:mt-40 duration-500 transition-all' : ' duration-500 transition-all '}`}>
             <img
-              src={cryptobgless}
+              src={WealthxHome}
               alt="About WealthEx"
-              className="w-120 lg:w-150 rounded-lg shadow-lg"
+              className="w-90 lg:w-130 rounded-lg shadow-lg"
             />
           </div>
         </div>
