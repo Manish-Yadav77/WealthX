@@ -1,5 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const SignUp = () => {
     password: '',
     confirmPassword: '',
   });
+
+  const navigate = useNavigate();
 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -50,7 +53,7 @@ const SignUp = () => {
       }
 
       // Success - redirect to login
-      window.location.href = '/login';
+      navigate('/login');
 
     } catch (err) {
       setError('Network error. Please try again.');
