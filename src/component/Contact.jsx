@@ -4,7 +4,7 @@ import EarningSection from "./home/EarningSection";
 
 const Contact = () => {
 
-  const obj={title:'Tradez', para:'Company', para2:'Contact'}
+  const obj={title:'WealthX', para:'Company', para2:'Contact'}
 
   return (
     <div className="bg-gray-950 text-white text-sm md:text-base lg:text-lg min-h-screen">

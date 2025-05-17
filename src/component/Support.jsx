@@ -25,7 +25,7 @@ const Support = () => {
     },
   ];
 
-  const obj={title:'Tradez', para:'Resource', para2:'Support'}
+  const obj={title:'WealthX', para:'Resource', para2:'Support'}
   return (
     <>
     {/* Header */}

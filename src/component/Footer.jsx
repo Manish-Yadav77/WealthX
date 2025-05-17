@@ -129,7 +129,7 @@ function Footer() {
         {/* Bottom Line */}
         <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-5">
           <div className="text-center md:text-left">
-            &copy; 2020 <strong className="text-[#9ad953]">Tradez</strong> – All Rights Reserved
+            &copy; 2020 <strong className="text-[#9ad953]">WealthX</strong> – All Rights Reserved
           </div>
           <div className="flex gap-4">
             <Link to="#" className="hover:text-[#9ad953] transition">

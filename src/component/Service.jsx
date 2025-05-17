@@ -6,7 +6,7 @@ import TestimonialSlider from "./home/TestimonialSlider";
 import { bgImg, mobileStar } from "../data";
 import Header from "./home/Header";
 
-const obj={title:'tradez',para:'Service'}
+const obj={title:'WealthX',para:'Service'}
 
 
 const ServicesSection = () => {

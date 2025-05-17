@@ -44,7 +44,7 @@ const Roadmap = () => {
     StopScrolling,
   ]
 
-  const obj={title:'Tradez', para:'Resource', para2:'Roadmap'}
+  const obj={title:'WealthX', para:'Resource', para2:'Roadmap'}
 
   return (
     <>
