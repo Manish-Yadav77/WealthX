@@ -3,11 +3,14 @@ import Header from "./home/Header";
 import EarningSection from "./home/EarningSection";
 
 const Contact = () => {
+
+  const obj={title:'Tradez', para:'Company', para2:'Contact'}
+
   return (
     <div className="bg-gray-950 text-white text-sm md:text-base lg:text-lg min-h-screen">
       <main>
         {/* Header */}
-        <Header/>
+        <Header title={'Contact'} obj={obj}/>
 
         {/* Business submission form */}
         <section className="flex flex-col md:flex-row items-start md:px-48 md:pt-20 gap-16 p-8">

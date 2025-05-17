@@ -37,7 +37,7 @@ function EarningSection() {
             </div>
           </div>
 
-          <style jsx>{`
+          <style >{`
             .rotating-img {
               animation: rotate 25s linear infinite;
             }

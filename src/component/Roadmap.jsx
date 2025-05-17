@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { AffordableTrading, bgImg, BiggestMistake, FundsProblem, Get50Lakh, GrowWithUs, MostTrusted, NoCapital, SkillNeed, StopScrolling } from "../data";
 import EarningSection from "./home/EarningSection";
 import Marquee from "react-fast-marquee";
+import Header from "./home/Header";
 
 const Roadmap = () => {
   const scrollLineRef = useRef(null);
@@ -43,6 +44,8 @@ const Roadmap = () => {
     StopScrolling,
   ]
 
+  const obj={title:'Tradez', para:'Resource', para2:'Roadmap'}
+
   return (
     <>
       {/* TailwindCSS CDN is assumed loaded globally or via postcss */}
@@ -64,23 +67,7 @@ const Roadmap = () => {
 
       <main className="bg-[#1F1F1F] text-white text-sm md:text-base lg:text-lg">
         {/* Header */}
-        <div
-          className="h-[210px] sm:h-[250px] md:h-[300px] bg-cover bg-center bg-no-repeat flex flex-col justify-center"
-          style={{
-            backgroundImage: `url(${bgImg})`,
-          }}
-        >
-          <div className="px-6 sm:px-12 md:px-40">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
-              Roadmap
-            </h1>
-            <p className="text-base sm:text-lg pt-2 flex gap-2 sm:gap-4 items-center font-medium text-white">
-              <span>Tradez</span>
-              <span className="text-xs sm:text-sm">&gt;</span>
-              <span>Roadmap</span>
-            </p>
-          </div>
-        </div>
+        <Header title={'Roadmap'} obj={obj}/>
 
         {/* Roadmap Section */}
         <section className="py-10 px-4 bg-[#1F1F1F] relative">

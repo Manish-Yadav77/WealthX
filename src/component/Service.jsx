@@ -4,6 +4,9 @@ import PaymentCard from "./PaymentCard/PaymentCard";
 import FAQSection from "./home/FAQSection";
 import TestimonialSlider from "./home/TestimonialSlider";
 import { bgImg, mobileStar } from "../data";
+import Header from "./home/Header";
+
+const obj={title:'tradez',para:'Service'}
 
 
 const ServicesSection = () => {
@@ -11,19 +14,7 @@ const ServicesSection = () => {
     <div>
 
         {/* Header */}
-              <header
-                className="h-[210px] sm:h-[250px] md:h-[300px] bg-cover bg-center bg-no-repeat flex flex-col justify-center text-white"
-                style={{ backgroundImage: `url(${bgImg})` }}
-              >
-                <div className="px-6 sm:px-12 md:px-40">
-                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">Platinum A/C</h1>
-                  <p className="text-base sm:text-lg pt-2 flex gap-2 sm:gap-4 items-center font-medium">
-                    <span>Tradez</span>
-                    <span className="text-xs sm:text-sm">{'>'}</span>
-                    <span>Service</span>
-                  </p>
-                </div>
-              </header>
+              <Header title={'Platinum A/C'} obj={obj}/>
     
     {/* service we offer */}
         <PaymentCard/>
@@ -67,7 +58,7 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          <style jsx>{`
+          <style >{`
             .rotating-img {
               animation: rotate 25s linear infinite;
             }

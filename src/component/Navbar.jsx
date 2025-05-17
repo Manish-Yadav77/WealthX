@@ -20,15 +20,9 @@ function Navbar() {
   const { setUser, setToken } = useContext(QrContext) 
 
   const handleLogOut = () => {
-  localStorage.removeItem('token');
-  localStorage.removeItem('user');
   sessionStorage.clear();
-
-  // Reset user-related context or state
   setUser(null);
   setToken(null);
-
-  // Redirect to the login page
   navigate('/login');
 };
 
@@ -241,7 +235,7 @@ function Navbar() {
         </div>
       </nav>
 
-      <style jsx>{`
+      <style>{`
         .menu-links {
           display: none;
         }

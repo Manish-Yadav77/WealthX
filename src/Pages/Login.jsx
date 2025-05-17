@@ -43,10 +43,10 @@ const Login = () => {
           navigate('/accounts');
         } else if (status === 'Rejected') {
           alert('You were Rejected by Admin\ndo process again');
-          navigate('/services');
+          navigate('/accounts');
         } else {
           alert("Wait...\nAdmin didn't Approved You so please Wait...or by any plan first");
-          navigate('/services');
+          navigate('/accounts');
         }
       }
     } else {

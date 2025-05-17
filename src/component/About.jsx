@@ -9,11 +9,13 @@ import TestimonialSlider from "./home/TestimonialSlider";
 import GreenTab from "./home/GreenTab";
 
 const About = () => {
+
+  const obj={title:'Tradez', para:'Company', para2:'About'}
   return (
     <div className="bg-gray-950 text-white text-sm md:text-base lg:text-lg min-h-screen relative">
       <main>
         {/* Header */}
-        <Header/>
+        <Header title={'About'} obj={obj}/>
 
         {/* Green Tab Section  */}
 

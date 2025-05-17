@@ -25,10 +25,11 @@ const Support = () => {
     },
   ];
 
+  const obj={title:'Tradez', para:'Resource', para2:'Support'}
   return (
     <>
     {/* Header */}
-    <Header/>
+    <Header title={'Support'} obj={obj}/>
     
     {/* support section */}
     <section className="flex flex-col items-center justify-center mt-10 px-6 gap-6">

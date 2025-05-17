@@ -1,45 +1,65 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
+  const [timeLeft, setTimeLeft] = useState('');
+  const location = useLocation();
+
   useEffect(() => {
-    // Countdown logic
-    const countdown = document.getElementById("countdown");
     const offerEnd = new Date();
     offerEnd.setDate(offerEnd.getDate() + 3); // 3 days left
 
     function updateCountdown() {
       const now = new Date().getTime();
-      const distance = offerEnd - now;
+      const distance = offerEnd.getTime() - now;
+
+      if (distance < 0) {
+        setTimeLeft('Offer expired!');
+        return;
+      }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdown.innerHTML = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
-
-      if (distance < 0) {
-        countdown.innerHTML = "Offer expired!";
-      }
+      setTimeLeft(`${days}d : ${hours}h : ${minutes}m : ${seconds}s`);
     }
 
-    setInterval(updateCountdown, 1000);
+    updateCountdown(); // initial call
+
+    const intervalId = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(intervalId); // cleanup on unmount
   }, []);
 
-  const location = useLocation();
-
   return (
-    <div>
-      <footer className={`bg-gray-900 text-white py-12 px-6 md:px-24 ${location.pathname==='/login' || location.pathname === '/signup' ? 'hidden' : ''}`}>
+    <div className={`${location.pathname=='/admin' || location.pathname=='/Admin' ? 'hidden' : ''}`}>
+      <footer
+        className={`bg-gray-900 text-white py-12 pb-6 px-6 md:px-24 ${
+          location.pathname === '/login' || location.pathname === '/signup' ? 'hidden' : ''
+        }`}
+      >
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link to="/accounts" className="hover:text-white">Service</Link></li>
-              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
-              <li><Link to="/support" className="hover:text-white">Support</Link></li>
+              <li>
+                <Link to="/accounts" className="hover:text-white">
+                  Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="hover:text-white">
+                  Support
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -47,9 +67,21 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link to="/about" className="hover:text-white">About</Link></li>
-              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
-              <li><Link to="/rules&terms" className="hover:text-white">Rules & Terms</Link></li>
+              <li>
+                <Link to="/about" className="hover:text-white">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/rules&terms" className="hover:text-white">
+                  Rules & Terms
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -58,16 +90,18 @@ function Footer() {
             {/* Countdown Widget */}
             <div>
               <h3 className="text-lg font-semibold mb-2">Offer Ends In</h3>
-              <div id="countdown" className="text-xl font-bold text-[#9ad953]">
-                00d : 00h : 00m : 00s
-              </div>
+              <div className="text-xl font-bold text-[#9ad953]">{timeLeft}</div>
             </div>
 
             {/* Star Rating Widget */}
             <div>
               <h3 className="text-lg font-semibold mb-2">Rate Us</h3>
               <div className="flex gap-1 text-yellow-400 text-2xl">
-                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
               </div>
             </div>
           </div>
