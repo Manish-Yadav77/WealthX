@@ -221,6 +221,9 @@ const AdminPage = () => {
                   <p className="mb-1">
                     Email: <span className="text-gray-300">{req.email}</span>
                   </p>
+                  <p className="mb-1">
+                  User_Email: <span className="text-gray-300">{req.loggedInEmail}</span>
+                  </p>
                   <p className="mb-3">
                     UTR Number: <span className="text-gray-300">{req.utr}</span>
                   </p>

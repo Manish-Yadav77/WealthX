@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -104,9 +104,9 @@ const Login = () => {
 
         <p className="text-sm text-center mt-4">
           Don’t have an account?{" "}
-          <a href="/signup" className="hover:text-[#9AD953] underline">
+          <Link to="/signup" className="hover:text-[#9AD953] underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
