@@ -7,48 +7,51 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLogin = async (e) => {
-  e.preventDefault();
-  setError("");
+    e.preventDefault();
+    setError("");
 
-  if (!email.trim() || !password.trim()) {
-    setError("Please fill in both email and password.");
-    return;
-  }
-
-  try {
-    const response = await fetch("https://wealthx-backend.onrender.com/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-
-    const data = await response.json();
-
-    if (response.ok) {
-      console.log(data);
-
-      localStorage.setItem('token', JSON.stringify(data.token));
-      localStorage.setItem('user', JSON.stringify(data.user));
-      const role = data.user.role;
-
-      if (role === 'Admin') {
-        alert('Admin Login');
-        navigate('/admin');
-      } else if (role === 'user') {
-        alert('user Login');
-        navigate("/accounts");
-      }
-    } else {
-      setError(data.message || "Login failed");
+    if (!email.trim() || !password.trim()) {
+      setError("Please fill in both email and password.");
+      return;
     }
-  } catch (err) {
-    setError("Server error. Please try again later.");
-    console.error(err);
-  }
-};
 
+    try {
+      setIsLoading(true);
+
+      const response = await fetch("https://wealthx-backend.onrender.com/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log(data);
+        localStorage.setItem('token', JSON.stringify(data.token));
+        localStorage.setItem('user', JSON.stringify(data.user));
+        const role = data.user.role;
+
+        if (role === 'Admin') {
+          alert('Admin Login');
+          navigate('/admin');
+        } else if (role === 'user') {
+          alert('user Login');
+          navigate("/accounts");
+        }
+      } else {
+        setError(data.message || "Login failed");
+      }
+    } catch (err) {
+      setError("Server error. Please try again later.");
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="bg-gray-950 min-h-screen flex items-center justify-center text-white px-4 font-['Inter']">
@@ -86,9 +89,10 @@ const Login = () => {
 
           <button
             type="submit"
-            className="group w-full bg-[#9AD953] text-black font-bold py-3 rounded-md hover:bg-[#F5C96D] transition duration-300 hover:scale-105"
+            className="group w-full bg-[#9AD953] text-black font-bold py-3 rounded-md hover:bg-[#F5C96D] transition duration-300 hover:scale-105 hover:cursor-pointer"
+            disabled={isLoading}
           >
-            Sign In{" "}
+            {isLoading ? "Signing In..." : "Sign In"}{" "}
             <i className="fas fa-arrow-right ml-2 transition-transform duration-700 group-hover:rotate-[-70deg]"></i>
           </button>
         </form>
