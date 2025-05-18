@@ -5,6 +5,40 @@ import EarningSection from "./home/EarningSection";
 const Contact = () => {
   const obj = { title: "WealthX", para: "Company", para2: "Contact" };
 
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+
+  const data = {
+    firstName: form[0].value,
+    lastName: form[1].value,
+    email: form[2].value,
+    phone: form[3].value,
+    message: form[4].value,
+  };
+
+  try {
+    const res = await fetch("http://localhost:5000/contact-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+    if (result.success) {
+      alert("Message sent successfully!");
+      form.reset();
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("An error occurred. Try again later.");
+  }
+};
+
+
+
   return (
     <div className="bg-gray-950 text-white text-sm md:text-base lg:text-lg min-h-screen">
       <main>
@@ -52,8 +86,7 @@ const Contact = () => {
           <div className="flex-1">
             <h1 className="text-2xl font-semibold mb-4">Enquiry Form</h1>
             <form
-              action="https://getform.io/f/axowpweb"
-              method="POST"
+              onSubmit={handleSubmit}
               className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4"
               id="form"
             >
@@ -92,7 +125,7 @@ const Contact = () => {
               <div className="sm:col-span-2 text-right">
                 <button
                   type="submit"
-                  className="bg-[#9AD953] text-black px-6 py-2 rounded-lg mt-4 hover:bg-[#F5C96D] transition duration-300"
+                  className="bg-[#9AD953] text-black px-6 py-2 rounded-lg mt-4 hover:bg-[#F5C96D] transition duration-300 hover:cursor-pointer"
                 >
                   Send Message
                 </button>
