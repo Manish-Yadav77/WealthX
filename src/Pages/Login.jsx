@@ -18,7 +18,7 @@ const Login = () => {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/login", {
+    const response = await fetch("https://wealthx-backend.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -32,22 +32,13 @@ const Login = () => {
       localStorage.setItem('token', JSON.stringify(data.token));
       localStorage.setItem('user', JSON.stringify(data.user));
       const role = data.user.role;
-      const status = data.user.status;
 
       if (role === 'Admin') {
         alert('Admin Login');
         navigate('/admin');
       } else if (role === 'user') {
         alert('user Login');
-        if (status === 'Accepted') {
-          navigate('/accounts');
-        } else if (status === 'Rejected') {
-          alert('You were Rejected by Admin\ndo process again');
-          navigate('/accounts');
-        } else {
-          alert("Wait...\nAdmin didn't Approved You so please Wait...or by any plan first");
-          navigate('/accounts');
-        }
+        navigate("/accounts");
       }
     } else {
       setError(data.message || "Login failed");

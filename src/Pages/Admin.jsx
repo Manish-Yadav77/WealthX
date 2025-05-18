@@ -83,7 +83,7 @@ const AdminPage = () => {
       // let updatedUser1;
       // // Update user status (no longer checking for "Pending" only)
       // if(userStatus==="Pending"){
-      //   const userRes1 = await fetch(`http://localhost:5000/update-userstatus`, {
+      //   const userRes1 = await fetch(`https://wealthx-backend.onrender.com/update-userstatus`, {
       //   method: "PATCH",
       //   headers: { "Content-Type": "application/json" },
       //   body: JSON.stringify({ email: loggedInEmail, status: action }),
@@ -95,7 +95,7 @@ const AdminPage = () => {
       // }
 
       // Update payment status
-      const userRes2 = await fetch(`http://localhost:5000/update-paymentstatus`, {
+      const userRes2 = await fetch(`https://wealthx-backend.onrender.com/update-paymentstatus`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id, status: action }),

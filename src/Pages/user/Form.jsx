@@ -23,7 +23,7 @@ const Form = () => {
   useEffect(() => {
     const fetchQrCodes = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/qrcodes");
+        const response = await fetch("https://wealthx-backend.onrender.com/api/qrcodes");
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) {
           setQr1(data[0].qr1);
@@ -81,7 +81,7 @@ const Form = () => {
     userData.append("screenshot", form.screenshot);
 
     try {
-      const response = await fetch("http://localhost:5000/api/submit-payment", {
+      const response = await fetch("https://wealthx-backend.onrender.com/api/submit-payment", {
         method: "POST",
         body: userData,
       });

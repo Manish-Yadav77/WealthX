@@ -38,7 +38,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
     <div className="bg-gray-950 text-white py-8 pt-0 pb-0 relative overflow-hidden">
        <Slider {...settings}>
       {/* Slide 1 - About WealthEx */}
-      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore1 ? 'h-[800px] duration-500 transition-all' : 'h-[631px] duration-500 transition-all'}`}>
+      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore1 ? 'md:h-[800px] duration-500 transition-all' : 'h-[695px] md:h-[631px] duration-500 transition-all'}`}>
         <div className="flex flex-col lg:flex-row justify-between">
 
           {/* Left Side Content */}
@@ -118,7 +118,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
       </div>
 
       {/* Slide 2 - Meet the Minds Behind WealthEx */}
-      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore2 ? 'h-[800px] duration-500 transition-all' : 'h-[631px] duration-500 transition-all'} `}>
+      <div className={`slider p-6 md:p-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden ${readMore2 ? 'md:h-[800px] duration-500 transition-all' : 'h-[695px] md:h-[631px] duration-500 transition-all'}`}>
         <div className="flex flex-col lg:flex-row justify-between">
 
           {/* Left Part Content */}

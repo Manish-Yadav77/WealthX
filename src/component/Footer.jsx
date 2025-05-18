@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Footer() {
   const [timeLeft, setTimeLeft] = useState('');
   const location = useLocation();
 
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const offerEnd = new Date();
     offerEnd.setDate(offerEnd.getDate() + 3); // 3 days left
@@ -114,11 +116,14 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-3 py-2 text-sm rounded-l-md text-gray-900 focus:outline-none"
+                className="w-full px-3 py-2 text-sm rounded-l-md text-gray-100 hidden focus:outline-none"
               />
               <button
-                type="submit"
-                className="bg-[#9ad953] text-gray-900 px-4 py-2 rounded-r-md text-sm font-semibold hover:bg-lime-400"
+                type="button"
+                onClick={()=>{
+                  navigate('/signup')
+                }}
+                className="bg-[#9ad953] text-gray-900 px-4 py-2.5 rounded-r-md text-sm font-semibold hover:bg-lime-400 hover:cursor-pointer"
               >
                 Subscribe
               </button>

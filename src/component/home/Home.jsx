@@ -287,7 +287,7 @@ function Home() {
             {/* Button to toggle showMore */}
             <button
               onClick={() => setShowMore(!showMore)}
-              className=" inline-block text-[#14532d] font-semibold underline hover:text-[#0b3c0b] transition"
+              className=" inline-block text-[#14532d] font-semibold underline hover:text-[#0b3c0b] transition hover:cursor-pointer"
               type="button"
             >
               {showMore ? "Show Less" : "Read More"}
