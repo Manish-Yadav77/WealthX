@@ -36,7 +36,7 @@ const SignUp = () => {
     try {
       const response = await fetch('https://wealthx-backend.onrender.com/register', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
