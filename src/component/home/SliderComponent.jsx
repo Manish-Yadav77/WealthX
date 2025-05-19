@@ -98,7 +98,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
             {/* Learn More Button toggles showing above content */}
             <button
               type="button"
-              className="group bg-[#9AD953] mt-6 py-2 px-5 rounded-2xl text-black hover:bg-[#F5C96D] transition duration-700 font-semibold inline-flex items-center w-max"
+              className="group bg-[#9AD953] mt-6 py-2 px-5 rounded-2xl text-black hover:bg-[#F5C96D] transition duration-700 font-semibold inline-flex items-center w-max hover:cursor-pointer"
               onClick={toggleReadMore1}
             >
               {readMore1 ? "Show Less" : "Learn More"}
@@ -181,7 +181,7 @@ const toggleReadMore2 = () => setReadMore2(!readMore2);
             {/* Learn More Button toggles showing above content */}
             <button
               type="button"
-              className="group bg-[#9AD953] mt-6 py-2 px-5 rounded-2xl text-black hover:bg-[#F5C96D] transition duration-700 font-semibold inline-flex items-center w-max"
+              className="group bg-[#9AD953] mt-6 py-2 px-5 rounded-2xl text-black hover:bg-[#F5C96D] transition duration-700 font-semibold inline-flex items-center w-max hover:cursor-pointer"
               onClick={toggleReadMore2}
             >
               {readMore2 ? "Show Less" : "Learn More"}
