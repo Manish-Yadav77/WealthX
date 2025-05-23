@@ -40,7 +40,7 @@ const Login = () => {
           navigate('/admin');
         } else if (role === 'user') {
           alert('user Login');
-          navigate("/accounts");
+          navigate("/user");
         }
       } else {
         setError(data.message || "Login failed");

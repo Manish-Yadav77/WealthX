@@ -34,7 +34,7 @@ const ServicesSection = () => {
             {/* Left Part */}
             <div className="flex flex-col gap-4 text-center md:text-left">
               <h1 className="text-xl md:text-4xl text-white">
-                Start earning with only $20
+                Start earning with only ₹3400
               </h1>
               <p className="text-sm md:text-base text-gray-300">
                 Try our super easy portal for free

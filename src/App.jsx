@@ -16,6 +16,8 @@ import TermsAndConditions from './component/TermsConditions';
 import Roadmap from './component/Roadmap';
 import PrivateRoute from './component/PrivateRoute';
 import Support from './component/Support';
+import UsersPage from './Pages/user/UsersPage';
+import PageNotFound from './Pages/PageNotFound';
 
 function App() {
   const [qr1, setQr1] = useState(null);
@@ -41,6 +43,15 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route
+            path="/user"
+            element={
+              <PrivateRoute>
+                <UsersPage />
+              </PrivateRoute>
+            }
+          />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/accounts" element={<PrivateRoute >
@@ -52,6 +63,7 @@ function App() {
             <Route path="/rules&terms" element={<TermsAndConditions />} />
             <Route path="/roadmap" element={<Roadmap />} />
             <Route path="/support" element={<Support/>} />
+            <Route path="/*" element={<PageNotFound/>} />
           </Routes>
           <Footer/>
         </div>
