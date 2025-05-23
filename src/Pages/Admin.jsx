@@ -17,14 +17,14 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const qrRes = await fetch("http://localhost:5000/api/qrcodes");
+        const qrRes = await fetch("https://wealthx-backend.onrender.com/api/qrcodes");
         const qrData = await qrRes.json();
         setQr1Image(qrData.qr1);
         setQr2Image(qrData.qr2);
         setQr1(qrData.qr1);
         setQr2(qrData.qr2);
 
-        const reqRes = await fetch("http://localhost:5000/api/admin/requests");
+        const reqRes = await fetch("https://wealthx-backend.onrender.com/api/admin/requests");
         const reqData = await reqRes.json();
         setRequests(reqData);
       } catch (err) {
@@ -52,7 +52,7 @@ const AdminPage = () => {
     if (tempQr2) formData.append("qr2", tempQr2);
 
     try {
-      const res = await fetch("http://localhost:5000/upload", {
+      const res = await fetch("https://wealthx-backend.onrender.com/upload", {
         method: "PATCH",
         body: formData,
       });
